@@ -1,6 +1,5 @@
 package com.magadiflo.app.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,7 +25,6 @@ public class Course {
     private double fee;
 
     @ManyToMany(mappedBy = "courses")
-    @JsonBackReference //Para evitar el bucle infinito cuando se retorna por el endPoint (por ejemplo /students) a los students
     private Set<Student> students;
 
 }

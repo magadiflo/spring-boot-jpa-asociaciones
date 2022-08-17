@@ -21,4 +21,22 @@ public class StudentServiceImpl implements IStudentService {
     public List<Student> findByNameContaining(String name) {
         return this.studentRepository.findByNameContaining(name);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Student> findAllStudents() {
+        return this.studentRepository.findAll();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Student findStudent(Long id) {
+        return this.studentRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public Student saveStudent(Student student) {
+        return this.studentRepository.save(student);
+    }
 }

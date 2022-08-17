@@ -1,6 +1,7 @@
 package com.magadiflo.app.service.impl;
 
 import com.magadiflo.app.entity.Course;
+import com.magadiflo.app.repository.ICourseRepository;
 import com.magadiflo.app.service.ICourseService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,12 +13,12 @@ import java.util.List;
 @Service
 public class CourseServiceImpl implements ICourseService {
 
-    private final ICourseService courseService;
+    private final ICourseRepository courseRepository;
 
     @Override
     @Transactional(readOnly = true)
     public List<Course> findByFeeLessThan(double fee) {
-        return this.courseService.findByFeeLessThan(fee);
+        return this.courseRepository.findByFeeLessThan(fee);
     }
 
 }

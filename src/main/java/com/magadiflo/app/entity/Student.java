@@ -23,7 +23,7 @@ public class Student {
     private int age;
     private String dept;
 
-    @ManyToMany
+    @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
     @JoinTable(
             name = "students_courses",
             joinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id"),

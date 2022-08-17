@@ -8,4 +8,10 @@ public interface IStudentService {
 
     List<Student> findByNameContaining(String name);
 
+    List<Student> findAllStudents();
+
+    Student findStudent(Long id);
+
+    Student saveStudent(Student student);
+
 }

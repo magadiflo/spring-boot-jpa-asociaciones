@@ -51,3 +51,5 @@ Podemos observar que se está exponiendo directamente la Entity Student por el E
 causará el bucle infinito, ya que el Student tiene una lista de cursos, y cada curso de esa lista
 tiene asociado un Student, y al momento de hacer la conversión a JSON se generará ese bucle infinito
 ```
+## [Entity Relationship In JPA/Hibernate/ORM](https://javatechonline.com/entity-relationship-in-jpa-hibernate-orm/?fbclid=IwAR1sBdyyECpkdFe1eulDOHdNY6DojVKgSwpJuh2qfjyUpxEJdYsfAKKL5ks)
+Información sobre relaciones con jpa/hibernate 
